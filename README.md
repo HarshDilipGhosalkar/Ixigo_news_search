@@ -97,18 +97,10 @@ Configure these keys in the `news_services.py` file.
 - **Frontend**: Next.js, Tailwind CSS
 - **APIs**: NewsAPI, Google News API
 
----
-
-## Screenshots
-
-![Search Page](https://via.placeholder.com/800x400)
-![Results Page](https://via.placeholder.com/800x400)
-
----
 
 ## Contributors
 
-- **Your Name**: [Harsh Ghosalkar](https://github.com/HarshDilipGhosalkar)
+[Harsh Ghosalkar](https://github.com/HarshDilipGhosalkar)
 
 ---
 
