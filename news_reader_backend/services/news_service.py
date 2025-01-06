@@ -1,19 +1,23 @@
 import requests
 from datetime import datetime, timedelta
+import os
 
-NEWS_API_KEY = '9f6420e0cef840a38b099e596dc0cebd'
-GOOGLE_NEWS_API_KEY = 'edd78716acmshc806555de2b3ee0p11fdd4jsnca03b10455c4'
+# Load API keys from environment variables
+NEWS_API_KEY = os.getenv('NEWS_API_KEY')
+GOOGLE_NEWS_API_KEY = os.getenv('GOOGLE_NEWS_API_KEY')
 
 NEWS_API_BASE_URL = "https://newsapi.org/v2/everything"
 GOOGLE_NEWS_API_BASE_URL = "https://google-news1.p.rapidapi.com/search"
 
 def fetch_news(query):
+    """Fetches news articles from both NewsAPI and Google News API."""
     news_api_articles = fetch_newsapi_articles(query)
     google_news_articles = fetch_google_news_articles(query)
     combined_articles = news_api_articles + google_news_articles
     return combined_articles
 
 def fetch_newsapi_articles(query):
+    """Fetches news articles from NewsAPI."""
     two_weeks_ago = (datetime.now() - timedelta(weeks=2)).strftime('%Y-%m-%d')
     params = {
         'q': query,
@@ -30,6 +34,7 @@ def fetch_newsapi_articles(query):
         return []
 
 def fetch_google_news_articles(query):
+    """Fetches news articles from Google News API."""
     headers = {
         'X-RapidAPI-Key': GOOGLE_NEWS_API_KEY,
         'X-RapidAPI-Host': 'google-news1.p.rapidapi.com'
