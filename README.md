@@ -1,5 +1,14 @@
 
 # Ixigo Task
+### Demo Video:
+You can watch the demo of the project here:
+
+
+
+
+
+
+[![Video Thumbnail](https://github.com/user-attachments/assets/85bfa761-9610-4b4b-b7d2-8b949d3141e3)](https://github.com/user-attachments/assets/85bfa761-9610-4b4b-b7d2-8b949d3141e3)
 
 ## Project Overview
 
